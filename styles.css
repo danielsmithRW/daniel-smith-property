@@ -52,3 +52,34 @@
   }
   .hero-v2 .name-card strong{font-size:22px}
 }
+
+/* Mobile hero: text-led, avoid consecutive Daniel portraits */
+@media(max-width:600px){
+  .hero-v2{
+    display:block;
+    padding:64px 7vw 54px;
+    min-height:auto;
+  }
+  .hero-v2 .hero-copy{
+    padding-bottom:0;
+    max-width:100%;
+  }
+  .hero-v2 .daniel-wrap{
+    display:none!important;
+  }
+  .hero-v2 h1{
+    font-size:clamp(44px,13vw,58px);
+    line-height:.98;
+  }
+  .hero-v2 .lead{
+    margin-top:22px;
+    font-size:16px;
+    line-height:1.65;
+  }
+  .hero-v2 .actions{
+    margin-top:28px;
+  }
+  .hero-v2 .hero-contact{
+    margin-top:24px;
+  }
+}
