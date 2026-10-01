@@ -83,3 +83,66 @@
     margin-top:24px;
   }
 }
+
+/* Opening sequence refinement */
+@media(min-width:901px){
+  .hero-v2 .daniel-wrap{
+    transform:translateX(-55px);
+  }
+}
+
+/* About: editorial rather than a second full portrait */
+.about-v2{
+  grid-template-columns:minmax(280px,.62fr) minmax(0,1.38fr);
+  gap:clamp(55px,7vw,110px);
+  align-items:center;
+  padding-top:100px;
+  padding-bottom:100px;
+}
+.about-v2 .about-photo{
+  height:430px;
+  max-width:430px;
+  justify-self:end;
+  overflow:hidden;
+  border-radius:2px;
+}
+.about-v2 .about-photo img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 22%;
+}
+.about-v2 .about-copy{
+  max-width:760px;
+}
+.about-v2 .about-copy h2{
+  max-width:720px;
+  margin-bottom:24px;
+}
+.about-v2 .about-copy p{
+  max-width:680px;
+}
+@media(max-width:900px){
+  .about-v2{
+    grid-template-columns:1fr;
+    gap:36px;
+    padding-top:70px;
+    padding-bottom:70px;
+  }
+  .about-v2 .about-photo{
+    width:100%;
+    max-width:520px;
+    height:360px;
+    justify-self:start;
+  }
+}
+@media(max-width:600px){
+  .about-v2{
+    padding-top:0;
+    gap:32px;
+  }
+  .about-v2 .about-photo{
+    height:320px;
+    max-width:none;
+  }
+}
