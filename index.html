@@ -28,5 +28,37 @@
   </div>
 </section>
 <section class='insights' id='insights'><p class='eyebrow'>DANIEL'S TAKE</p><div class='section-head'><h2>Property without the jargon.</h2><p>Short, useful answers to the questions homeowners and buyers actually ask me.</p></div><div class='insight-grid'><article><span>SELLING</span><h3>Should I renovate before I sell?</h3><p>Sometimes. But spending $30,000 doesn't automatically add $30,000 to the sale price.</p></article><article><span>MARKET</span><h3>What are buyers noticing right now?</h3><p>Price is only part of it. Buyers are increasingly calculating the work a home needs before making their offer.</p></article><article><span>APPRAISALS</span><h3>Online estimate vs an appraisal</h3><p>Algorithms know sales data. They don't know what you've changed inside your home.</p></article></div></section>
-<section class='appraisal' id='appraisal'><div><p class='eyebrow'>YOUR PROPERTY</p><h2>Curious what your home is worth?</h2><p>You don't need to be selling. If you want a current view of where your property sits in the market, send me the details.</p></div><form onsubmit='event.preventDefault();document.querySelector(".thanks").hidden=false;'><input required placeholder='Your name'><input required placeholder='Property address'><input type='email' placeholder='Email'><input placeholder='Phone'><select><option>I'd like an updated market value</option><option>I'm thinking about selling</option><option>Just keeping an eye on the market</option><option>I have a property question</option></select><textarea placeholder='Anything I should know about the property?'></textarea><button class='btn primary'>Send to Daniel</button><p class='thanks' hidden>Thanks — this demo form is working visually. We'll connect it to your preferred enquiry destination before launch.</p></form></section>
+<section class='appraisal appraisal-v2' id='appraisal'>
+  <div class='appraisal-copy'>
+    <p class='eyebrow'>YOUR PROPERTY</p>
+    <h2>Curious what your home is worth?</h2>
+    <p class='appraisal-lead'>You don't need to be ready to sell. Sometimes you simply want to know where you stand.</p>
+    <div class='appraisal-points'>
+      <div><strong>01</strong><span>A current view of your property — not just an online estimate.</span></div>
+      <div><strong>02</strong><span>Relevant local sales and what buyers are responding to.</span></div>
+      <div><strong>03</strong><span>A conversation without assuming you're ready to list.</span></div>
+    </div>
+    <p class='privacy-line'>Your details come directly to Daniel. No mailing-list sign-up required.</p>
+  </div>
+  <form class='appraisal-form' id='appraisal-form'>
+    <div class='form-head'><span>PROPERTY APPRAISAL</span><h3>Tell me about the property.</h3></div>
+    <label>YOUR NAME<input required name='name' autocomplete='name' placeholder='Daniel Smith'></label>
+    <label>PROPERTY ADDRESS<input required name='address' autocomplete='street-address' placeholder='Street address, suburb'></label>
+    <div class='form-split'>
+      <label>EMAIL<input type='email' name='email' autocomplete='email' placeholder='you@email.com'></label>
+      <label>PHONE<input type='tel' name='phone' autocomplete='tel' placeholder='04xx xxx xxx'></label>
+    </div>
+    <label>WHAT WOULD YOU LIKE TO KNOW?
+      <select name='intent'>
+        <option>I'd like an updated market value</option>
+        <option>I'm thinking about selling</option>
+        <option>Just keeping an eye on the market</option>
+        <option>I have a property question</option>
+      </select>
+    </label>
+    <label>ANYTHING I SHOULD KNOW?<textarea name='notes' placeholder='Renovations, improvements, plans, timing or anything else you think is relevant.'></textarea></label>
+    <button class='btn primary appraisal-submit' type='submit'>Send my property details →</button>
+    <p class='form-note'>This will open a pre-filled email to Daniel so you can review the details before sending.</p>
+  </form>
+</section>
 <section class='contact' id='contact'><p class='eyebrow'>START A CONVERSATION</p><h2>Property question?<br><em>Ask me.</em></h2><p>Whether you're selling next month, next year, or you're simply curious about something happening in your street.</p><p><strong>daniel.smith@raywhite.com</strong></p><a class='btn primary' href='mailto:daniel.smith@raywhite.com'>Email Daniel</a><a class='btn phone' href='tel:0434544964'>0434 544 964</a></section></main><footer><div class='brand'>DANIEL <b>SMITH</b><small>SHOALHAVEN PROPERTY</small></div><p>Local property insights across the Shoalhaven.</p><p class='fine'>Ray White agency details, licence information and required disclosures to be added before public launch.</p></footer><script src='script.js'></script></body></html>
