@@ -24,3 +24,31 @@
 .hero-v2 .daniel-main{height:108%;max-width:none;width:auto;object-fit:contain;object-position:center bottom;transform:translateY(2%)}
 @media(max-width:900px){.hero-v2 .daniel-main{height:104%}}
 @media(max-width:600px){.hero-v2 .daniel-main{height:100%;max-width:115%}}
+
+/* Hero name treatment: text directly on navy background */
+.hero-v2 .name-card{
+  background:transparent!important;
+  box-shadow:none!important;
+  color:#fff!important;
+  padding:0!important;
+  min-width:0!important;
+  right:18px!important;
+  bottom:34px!important;
+  text-align:right;
+}
+.hero-v2 .name-card strong{
+  color:#fff!important;
+  font-size:26px;
+}
+.hero-v2 .name-card span{
+  color:rgba(255,255,255,.88)!important;
+  font-size:12px;
+  letter-spacing:.02em;
+}
+@media(max-width:600px){
+  .hero-v2 .name-card{
+    right:10px!important;
+    bottom:18px!important;
+  }
+  .hero-v2 .name-card strong{font-size:22px}
+}
