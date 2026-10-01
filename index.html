@@ -40,7 +40,11 @@
     </div>
     <p class='privacy-line'>Your details come directly to Daniel. No mailing-list sign-up required.</p>
   </div>
-  <form class='appraisal-form' id='appraisal-form'>
+  <form class='appraisal-form' id='appraisal-form' action='https://api.web3forms.com/submit' method='POST'>
+    <input type='hidden' name='access_key' value='YOUR_WEB3FORMS_ACCESS_KEY'>
+    <input type='hidden' name='subject' value='New Property Appraisal Enquiry - Daniel Smith Website'>
+    <input type='hidden' name='from_name' value='Daniel Smith Property Website'>
+    <input type='checkbox' name='botcheck' class='botcheck' tabindex='-1' autocomplete='off'>
     <div class='form-head'><span>PROPERTY APPRAISAL</span><h3>Tell me about the property.</h3></div>
     <label>YOUR NAME<input required name='name' autocomplete='name' placeholder='Daniel Smith'></label>
     <label>PROPERTY ADDRESS<input required name='address' autocomplete='street-address' placeholder='Street address, suburb'></label>
@@ -58,7 +62,8 @@
     </label>
     <label>ANYTHING I SHOULD KNOW?<textarea name='notes' placeholder='Renovations, improvements, plans, timing or anything else you think is relevant.'></textarea></label>
     <button class='btn primary appraisal-submit' type='submit'>Send my property details →</button>
-    <p class='form-note'>This will open a pre-filled email to Daniel so you can review the details before sending.</p>
+    <p class='form-note'>Your details will be sent directly to Daniel.</p>
+    <div class='form-status' id='form-status' role='status' aria-live='polite'></div>
   </form>
 </section>
 <section class='contact' id='contact'><p class='eyebrow'>START A CONVERSATION</p><h2>Property question?<br><em>Ask me.</em></h2><p>Whether you're selling next month, next year, or you're simply curious about something happening in your street.</p><p><strong>daniel.smith@raywhite.com</strong></p><a class='btn primary' href='mailto:daniel.smith@raywhite.com'>Email Daniel</a><a class='btn phone' href='tel:0434544964'>0434 544 964</a></section></main><footer><div class='brand'>DANIEL <b>SMITH</b><small>SHOALHAVEN PROPERTY</small></div><p>Local property insights across the Shoalhaven.</p><p class='fine'>Ray White agency details, licence information and required disclosures to be added before public launch.</p></footer><script src='script.js'></script></body></html>
