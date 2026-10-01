@@ -1,34 +1,33 @@
 const menu=document.querySelector('.menu');const nav=document.querySelector('nav');if(menu&&nav){menu.addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')))}
 
-// Appraisal enquiry: zero-cost email handoff for static GitHub Pages hosting
+
+// Appraisal enquiry via Web3Forms
 const appraisalForm=document.querySelector('#appraisal-form');
 if(appraisalForm){
-  appraisalForm.addEventListener('submit',e=>{
+  const status=document.querySelector('#form-status');
+  appraisalForm.addEventListener('submit',async e=>{
     e.preventDefault();
-    const data=new FormData(appraisalForm);
-    const name=(data.get('name')||'').trim();
-    const address=(data.get('address')||'').trim();
-    const email=(data.get('email')||'').trim();
-    const phone=(data.get('phone')||'').trim();
-    const intent=data.get('intent')||'Property appraisal';
-    const notes=(data.get('notes')||'').trim();
-    const subject='Property enquiry — '+address;
-    const body=[
-      'Hi Daniel,',
-      '',
-      'I would like to discuss my property.',
-      '',
-      'Name: '+name,
-      'Property: '+address,
-      'Email: '+(email||'Not provided'),
-      'Phone: '+(phone||'Not provided'),
-      'Enquiry: '+intent,
-      '',
-      'Property notes:',
-      notes||'None provided',
-      '',
-      'Sent from danielsmithrw.github.io/daniel-smith-property/'
-    ].join('\n');
-    window.location.href='mailto:daniel.smith@raywhite.com?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    const button=appraisalForm.querySelector('.appraisal-submit');
+    const original=button.textContent;
+    button.disabled=true;
+    button.textContent='Sending...';
+    status.className='form-status';
+    status.textContent='';
+    try{
+      const data=new FormData(appraisalForm);
+      const response=await fetch(appraisalForm.action,{method:'POST',body:data,headers:{Accept:'application/json'}});
+      const result=await response.json();
+      if(response.ok&&result.success){
+        status.className='form-status success';
+        status.innerHTML='<strong>Thanks - your property details have been sent.</strong><br>Daniel will be in touch.';
+        appraisalForm.reset();
+      }else{throw new Error(result.message||'Submission failed');}
+    }catch(error){
+      status.className='form-status error';
+      status.innerHTML='Something went wrong sending the form. Please call <a href="tel:0434544964">0434 544 964</a> or email <a href="mailto:daniel.smith@raywhite.com">daniel.smith@raywhite.com</a>.';
+    }finally{
+      button.disabled=false;
+      button.textContent=original;
+    }
   });
 }
