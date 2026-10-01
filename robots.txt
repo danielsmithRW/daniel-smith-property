@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danielsmithrw.github.io/daniel-smith-property/sitemap.xml
