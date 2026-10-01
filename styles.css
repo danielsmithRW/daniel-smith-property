@@ -19,3 +19,8 @@
 
 /* Hero refinement: remove yellow portrait backdrop */
 .hero-v2 .yellow-block{display:none!important}
+
+/* Hero portrait scale refinement */
+.hero-v2 .daniel-main{height:108%;max-width:none;width:auto;object-fit:contain;object-position:center bottom;transform:translateY(2%)}
+@media(max-width:900px){.hero-v2 .daniel-main{height:104%}}
+@media(max-width:600px){.hero-v2 .daniel-main{height:100%;max-width:115%}}
