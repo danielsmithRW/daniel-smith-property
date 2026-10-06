@@ -1,3 +1,13 @@
+// Google Analytics 4
+window.dataLayer=window.dataLayer||[];
+function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());
+gtag('config','G-GVXLGHKB7D');
+const googleTag=document.createElement('script');
+googleTag.async=true;
+googleTag.src='https://www.googletagmanager.com/gtag/js?id=G-GVXLGHKB7D';
+document.head.appendChild(googleTag);
+
 const menu=document.querySelector('.menu');const nav=document.querySelector('nav');if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu')}))}
 
 // Appraisal enquiry via Web3Forms
