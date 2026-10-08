@@ -10,6 +10,13 @@ document.head.appendChild(googleTag);
 
 const menu=document.querySelector('.menu');const nav=document.querySelector('nav');if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu')}))}
 
+// Route email links to the on-site enquiry form
+const onHomePage=location.pathname==='/'||location.pathname.endsWith('/index.html');
+const enquiryTarget=onHomePage?'#appraisal':'index.html#appraisal';
+document.querySelectorAll('a[href^="mailto:"]').forEach(link=>{
+  link.setAttribute('href',enquiryTarget);
+});
+
 // Sitewide legal, agency and privacy information
 const footerBottom=document.querySelector('.footer-bottom');
 if(footerBottom){
