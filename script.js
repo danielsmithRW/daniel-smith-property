@@ -10,9 +10,26 @@ document.head.appendChild(googleTag);
 
 const menu=document.querySelector('.menu');const nav=document.querySelector('nav');if(menu&&nav){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation menu':'Open navigation menu')});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Open navigation menu')}))}
 
-// Appraisal enquiry via Web3Forms
+// Sitewide legal, agency and privacy information
+const footerBottom=document.querySelector('.footer-bottom');
+if(footerBottom){
+  const oldFine=footerBottom.querySelector('.fine');
+  if(oldFine) oldFine.remove();
+  const legal=document.createElement('p');
+  legal.className='fine';
+  legal.innerHTML='Dunace Pty Ltd T/as Ray White Nowra · ABN 80 003 551 942 · Licence No. 271-832<br><a href="legal.html">Legal &amp; Disclaimer</a> · <a href="https://www.raywhite.com/franchisee-privacy-policy/" target="_blank" rel="noopener">Privacy Policy</a> · <a href="https://www.raywhite.com/contact/collection-notice-for-privacy-purposes-and-consent/" target="_blank" rel="noopener">Collection Notice</a>';
+  footerBottom.appendChild(legal);
+}
+
+// Appraisal privacy / collection notice
 const appraisalForm=document.querySelector('#appraisal-form');
 if(appraisalForm){
+  const existingNote=appraisalForm.querySelector('.form-note');
+  const privacy=document.createElement('p');
+  privacy.className='form-note privacy-consent';
+  privacy.innerHTML='By submitting this form, you consent to your personal information being collected and used to respond to your enquiry and provide relevant real estate services. See the <a href="https://www.raywhite.com/franchisee-privacy-policy/" target="_blank" rel="noopener">Ray White Franchisee Privacy Policy</a> and <a href="https://www.raywhite.com/contact/collection-notice-for-privacy-purposes-and-consent/" target="_blank" rel="noopener">Collection Notice</a>.';
+  if(existingNote) existingNote.insertAdjacentElement('afterend',privacy); else appraisalForm.appendChild(privacy);
+
   const status=document.querySelector('#form-status');
   appraisalForm.addEventListener('submit',async e=>{
     e.preventDefault();
