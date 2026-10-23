@@ -1,0 +1,48 @@
+/* Homepage editorial refresh, October 2026 */
+
+/* Compact, text-led hero */
+.hero-v2.hero-refresh{
+  min-height:auto;
+  display:block;
+  background:#fff;
+  color:var(--ink);
+  padding:clamp(72px,9vw,130px) 6vw clamp(76px,9vw,125px);
+  border-bottom:1px solid var(--line);
+}
+.hero-v2.hero-refresh:before{display:none}
+.hero-refresh .hero-copy{max-width:900px;padding:0}
+.hero-refresh .eyebrow{color:var(--muted)}
+.hero-refresh h1{font-size:clamp(58px,7.4vw,108px);max-width:900px;margin:18px 0 26px;line-height:.96;color:var(--ink)}
+.hero-refresh .lead{max-width:720px;color:var(--muted);font-size:19px}
+.hero-refresh .ghost{border-color:var(--ink);color:var(--ink)}
+.hero-refresh .hero-contact{color:var(--muted);margin-top:30px}
+
+/* Homepage rhythm */
+.home-market-update{background:#fff}
+.suburbs-editorial{background:#f5f1e8}
+.results{background:#fff}
+.insights{background:#fafafa}
+.about-v2{background:#fff;border-top:1px solid var(--line)}
+
+/* Daniel section appears later as the human introduction */
+.about-v2 .about-copy p{color:#344054}
+.about-v2 .dark-actions .text-link{padding:14px 0}
+
+/* ATS latest image now uses West Nowra artwork */
+.ats-image.ats-west-real{background-image:url('around-the-suburbs-west-nowra.png');background-size:cover;background-position:center}
+.ats-thumb.ats-nowra-real{background-image:url('around-the-suburbs-nowra.png');background-size:cover;background-position:center}
+.ats-thumb.ats-north-real{background-image:url('around-the-suburbs-north-nowra.png');background-size:cover;background-position:center}
+
+/* Keep the editorial explanation easy to scan */
+.editorial-head .section-intro p{max-width:520px}
+
+@media(max-width:900px){
+  .hero-v2.hero-refresh{padding-top:72px;padding-bottom:78px}
+  .hero-refresh h1{font-size:clamp(54px,10vw,82px)}
+}
+@media(max-width:600px){
+  .hero-v2.hero-refresh{padding:58px 7vw 62px}
+  .hero-refresh h1{font-size:clamp(48px,14vw,64px)}
+  .hero-refresh .lead{font-size:16px}
+  .hero-refresh .actions .btn{width:100%;text-align:center}
+}
