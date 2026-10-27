@@ -1,0 +1,5 @@
+/* Around the Suburbs hub hero contrast fix */
+.hub-hero{background:#142033!important;color:#fff!important;}
+.hub-hero .eyebrow{color:#ffd400!important;}
+.hub-hero h1,.hub-hero h1 em{color:#fff!important;}
+.hub-hero p:not(.eyebrow){color:#d9dfe7!important;}
