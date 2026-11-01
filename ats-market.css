@@ -1,0 +1,16 @@
+
+/* Dated market checks, kept separate from original suburb features. */
+.monday-market{max-width:1180px;margin:0 auto;padding:55px 28px;border-bottom:1px solid var(--line);color:var(--ink);background:var(--white)}
+.monday-market h2{font-family:'Playfair Display',Georgia,serif;font-size:clamp(28px,4vw,44px);line-height:1.15;margin:12px 0 25px;color:var(--ink)}
+.monday-market h3{font-size:22px;color:var(--ink);margin:28px 0 12px}
+.monday-market p{max-width:900px;line-height:1.75}
+.monday-market a{color:inherit;text-underline-offset:3px}
+.monday-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin:28px 0}
+.monday-stats div{border:1px solid var(--line);padding:20px;background:var(--cream)}
+.monday-stats dt{font-size:13px;line-height:1.5;min-height:40px}
+.monday-stats dd{font-size:clamp(23px,3vw,32px);font-weight:700;margin:12px 0 0;line-height:1.2}
+.monday-market .monday-source{font-size:13px;color:#505c69}
+.monday-original{border-top:1px solid var(--line);padding-top:18px;font-size:14px;color:#505c69}
+.daniel-update h3{color:#fff}
+@media(max-width:800px){.monday-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){.monday-market{padding:40px 20px}.monday-stats{gap:10px}.monday-stats div{padding:15px}.monday-stats dt{font-size:12px}}
