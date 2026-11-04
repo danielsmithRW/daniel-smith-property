@@ -64,3 +64,16 @@ if(appraisalForm){
     }
   });
 }
+
+// Load Apollo live chat across pages using this shared script.
+(function () {
+  if (document.querySelector('script[src*="embed.tawk.to/6aea6ab4802e783c350ee819"]')) return;
+  window.Tawk_API = window.Tawk_API || {};
+  window.Tawk_LoadStart = new Date();
+  var chatScript = document.createElement('script');
+  chatScript.async = true;
+  chatScript.src = 'https://embed.tawk.to/6aea6ab4802e783c350ee819/1k6hr1keh';
+  chatScript.charset = 'UTF-8';
+  chatScript.setAttribute('crossorigin', '*');
+  document.head.appendChild(chatScript);
+})();
