@@ -17,6 +17,21 @@ document.querySelectorAll('a[href^="mailto:"]').forEach(link=>{
   link.setAttribute('href',enquiryTarget);
 });
 
+// Lead-generation interactions: record actions without sending personal information.
+function trackLeadEvent(name,details={}){
+  if(typeof gtag==='function') gtag('event',name,details);
+}
+document.addEventListener('click',event=>{
+  const link=event.target.closest('a[href]');
+  if(!link)return;
+  const href=link.getAttribute('href')||'';
+  if(href.startsWith('tel:')){
+    trackLeadEvent('phone_click',{link_location:location.pathname});
+  }else if(href.includes('#appraisal')){
+    trackLeadEvent('appraisal_cta_click',{link_location:location.pathname});
+  }
+});
+
 // Sitewide legal, agency and privacy information
 const footerBottom=document.querySelector('.footer-bottom');
 if(footerBottom){
@@ -51,6 +66,7 @@ if(appraisalForm){
       const response=await fetch(appraisalForm.action,{method:'POST',body:data,headers:{Accept:'application/json'}});
       const result=await response.json();
       if(response.ok&&result.success){
+        trackLeadEvent('appraisal_form_success',{form_name:'property_appraisal',page_path:location.pathname});
         status.className='form-status success';
         status.innerHTML='<strong>Thanks - your property details have been sent.</strong><br>Daniel will be in touch.';
         appraisalForm.reset();
