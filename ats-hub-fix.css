@@ -3,3 +3,23 @@
 .hub-hero .eyebrow{color:#ffd400!important;}
 .hub-hero h1,.hub-hero h1 em{color:#fff!important;}
 .hub-hero p:not(.eyebrow){color:#d9dfe7!important;}
+
+/* ATS tile system: consistent with the homepage navigation tiles. */
+.hub-archive{background:#fafaf8;padding:78px max(22px,calc((100vw - 1200px)/2))}
+.hub-archive-head{margin-bottom:32px;gap:32px}
+.hub-archive-head h2{font-size:clamp(34px,4vw,52px)}
+.hub-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.hub-card{display:flex;flex-direction:column;min-width:0;background:#fff;border:1px solid #e0e4e5;border-radius:9px;overflow:hidden;padding:0;box-shadow:0 2px 10px rgba(20,32,51,.035);transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease}
+.hub-card:hover,.hub-card:focus-visible{transform:translateY(-4px);box-shadow:0 12px 28px rgba(20,32,51,.13);border-color:#aeb9c4}
+.hub-card:focus-visible{outline:3px solid #d7b52a;outline-offset:3px}
+.hub-card-art{aspect-ratio:5/3;margin:0;flex-shrink:0;background-color:#e8e9e5}
+.hub-card>div:last-child{padding:21px 22px 22px;display:flex;flex-direction:column;flex:1}
+.hub-card small{font-family:'DM Sans',Arial,sans-serif;font-size:12px;line-height:1.5;letter-spacing:.075em;color:#665717}
+.hub-card h3{font-size:clamp(21px,2vw,26px);line-height:1.22;margin:10px 0 10px}
+.hub-card p{font-size:14px;line-height:1.6;margin:0 0 18px}
+.hub-card b{margin-top:auto;font-size:11px;letter-spacing:.09em;color:#142033}
+.hub-card:hover h3{text-decoration:none}
+@media(max-width:950px){.hub-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.hub-archive{padding:55px 6%}.hub-archive-head{grid-template-columns:1fr;margin-bottom:24px}.hub-grid{gap:12px}.hub-card>div:last-child{padding:15px}.hub-card small{font-size:10px;letter-spacing:.02em}.hub-card h3{font-size:18px}.hub-card p{font-size:12px;line-height:1.5}.hub-card b{font-size:10px}.hub-card-art{aspect-ratio:4/3}}
+@media(max-width:390px){.hub-grid{grid-template-columns:1fr}.hub-card-art{aspect-ratio:5/3}}
+@media(prefers-reduced-motion:reduce){.hub-card{transition:none}.hub-card:hover,.hub-card:focus-visible{transform:none}}
