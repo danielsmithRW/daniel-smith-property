@@ -18,3 +18,18 @@
 @media(max-width:900px){.article-shell{grid-template-columns:1fr}.article-side{position:static}}
 @media(max-width:600px){header{height:62px;padding:0 5%}.brand{font-size:17px}.brand small{font-size:8px}.article-hero{padding:30px 6% 36px}.article-hero .back-link{margin-bottom:21px}.article-hero h1{font-size:clamp(34px,9vw,43px);line-height:1.13;margin:10px 0 14px}.article-hero .article-deck{font-size:15px;line-height:1.6}.article-hero .article-byline{margin-top:19px}.article-shell{padding:40px 6% 52px}.article-content{font-size:16px;line-height:1.75}.article-content h2{font-size:29px;margin-top:36px}.article-footer-cta{padding:45px 6%}.ats-article-navigation{padding:23px 6% 36px}.ats-article-navigation a{font-size:13px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* ATS editorial review: consistent feature imagery and responsive figures */
+.ats-feature-image{max-width:1180px;margin:28px auto 0;padding:0 6vw}
+.ats-feature-image img{display:block;width:100%;height:auto;aspect-ratio:16/7;object-fit:cover;border-radius:8px}
+.article-page .monday-stats{grid-template-columns:repeat(4,minmax(0,1fr))}
+.article-page .monday-stats div{min-width:0}
+.article-page .monday-stats dd{overflow-wrap:anywhere}
+.article-page .market-stat{min-width:0}
+.article-page .market-stat strong{overflow-wrap:anywhere}
+.article-page .suburb-photo-hero.ats-bomaderry-feature{min-height:0!important;height:clamp(210px,34vw,420px);max-width:1180px;margin:28px auto 0;border-radius:8px;background-position:center!important}
+.article-page .live-market{padding-top:42px}
+.article-page .live-market-head{text-align:left;margin-left:0}
+.article-page .market-updated{background:#f4f0e7;color:#142033;font-size:12px}
+@media(max-width:800px){.article-page .monday-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.ats-feature-image{padding:0 6%;margin-top:18px}.ats-feature-image img{aspect-ratio:5/3}.article-page .suburb-photo-hero.ats-bomaderry-feature{margin:18px 6% 0;height:230px;border-radius:7px}.article-page .monday-stats{gap:10px}.article-page .monday-stats div{padding:13px}.article-page .monday-stats dt{font-size:12px;min-height:0}.article-page .monday-stats dd{font-size:clamp(20px,5.4vw,27px);margin-top:14px}.article-page .live-market{padding:35px 6% 20px}.article-page .market-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.article-page .market-stat{padding:15px 12px}.article-page .market-stat strong{font-size:clamp(20px,5.4vw,28px)}.article-page .market-stat span{font-size:12px}.article-page .sales-grid{grid-template-columns:1fr}.article-page .live-market-head h2{font-size:29px}.article-page .market-updated{font-size:11px;line-height:1.4}}
